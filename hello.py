@@ -1,2 +1,2 @@
-print("hello, world! :)", end = " ")
+print("hello, world!", end = " ")
 print("I'm master here ")
