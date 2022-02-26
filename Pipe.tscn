@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://flappy-bird-assets-master/sprites/pipe-green.png" type="Texture" id=1]
+[ext_resource path="res://Pipe.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 23.5, 159 )
+
+[node name="Pipe" type="RigidBody2D" groups=["Pipe_group"]]
+position = Vector2( 130, 182 )
+collision_layer = 4
+mass = 0.01
+gravity_scale = 0.0
+linear_damp = 0.0
+angular_damp = 0.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+offset = Vector2( 0, -225 )
+flip_v = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -226 )
+shape = SubResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 0, 433 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, -225 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( -0.5, 209 )
+shape = SubResource( 1 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+scale = Vector2( 2.3, 37.4125 )

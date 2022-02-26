@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="InputEventAction" id=3]
+action = "ui_play"
+
+[sub_resource type="ShortCut" id=4]
+shortcut = SubResource( 3 )
+
+[node name="HUD" type="CanvasLayer"]
+pause_mode = 2
+layer = 100
+
+[node name="Play" type="Button" parent="."]
+margin_left = 150.0
+margin_top = 290.0
+margin_right = 212.0
+margin_bottom = 324.0
+shortcut_in_tooltip = false
+action_mode = 0
+shortcut = SubResource( 4 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
