@@ -1,0 +1,26 @@
+Godot Engine v3.4.2.stable.official.45eaa2daf - https://godotengine.org
+OpenGL ES 3.0 Renderer: Intel(R) HD Graphics 620
+OpenGL ES Batching: ON
+ 
+ERROR: Resource file not found: res://flappy-bird-assets-master/sprites/bluebird-midflap.png.
+   at: _load (core/io/resource_loader.cpp:275) - Condition "!file_check->file_exists(p_path)" is true. Returned: RES()
+ERROR: res://Bird.tscn:3 - Parse Error: [ext_resource] referenced nonexistent resource at: res://flappy-bird-assets-master/sprites/bluebird-midflap.png
+   at: poll (scene/resources/resource_format_text.cpp:412) - res://Bird.tscn:3 - Parse Error: [ext_resource] referenced nonexistent resource at: res://flappy-bird-assets-master/sprites/bluebird-midflap.png
+ERROR: Failed to load resource 'res://Bird.tscn'.
+   at: load (core/io/resource_loader.cpp:206) - Condition "err != OK" is true. Returned: RES()
+ERROR: Failed loading resource: res://Bird.tscn. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270) - Condition "found" is true. Returned: RES()
+ERROR: res://World.tscn:3 - Parse Error: [ext_resource] referenced nonexistent resource at: res://Bird.tscn
+   at: poll (scene/resources/resource_format_text.cpp:412) - res://World.tscn:3 - Parse Error: [ext_resource] referenced nonexistent resource at: res://Bird.tscn
+ERROR: Failed to load resource 'res://World.tscn'.
+   at: load (core/io/resource_loader.cpp:206) - Condition "err != OK" is true. Returned: RES()
+ERROR: Failed loading resource: res://World.tscn. Make sure resources have been imported by opening the project in the editor at least once.
+   at: _load (core/io/resource_loader.cpp:270) - Condition "found" is true. Returned: RES()
+ERROR: Failed loading scene: res://World.tscn
+   at: start (main/main.cpp:2011) - Condition "!scene" is true. Returned: false
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+   at: cleanup (core/object.cpp:2064) - ObjectDB instances leaked at exit (run with --verbose for details).
+ERROR: Resources still in use at exit (run with --verbose for details).
+   at: clear (core/resource.cpp:417) - Resources still in use at exit (run with --verbose for details).
+ERROR: There are still MemoryPool allocs in use at exit!
+   at: cleanup (core/pool_vector.cpp:63) - Condition "allocs_used > 0" is true.
