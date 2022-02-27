@@ -11,8 +11,8 @@ func _on_Time_spawn_timeout() -> void:
 	p.linear_velocity = veclocity * p.speed
 	
 func game_start() -> void:
-	update_score(0)
 	score = 0
+	update_score(0)
 	$HUD/Play.hide()
 	get_tree().call_group("Pipe_group", "died")
 	get_tree().paused = false
