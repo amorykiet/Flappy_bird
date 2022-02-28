@@ -36,4 +36,3 @@ func hit_score(body):
 	update_score(score)
 	if score > $HUD/High_score.text as int:
 		update_high_score(score)
-

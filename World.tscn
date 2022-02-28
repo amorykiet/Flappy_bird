@@ -125,7 +125,7 @@ __meta__ = {
 }
 
 [node name="Line_cross" type="Area2D" parent="."]
-position = Vector2( 162, 210 )
+position = Vector2( 84, 212 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Line_cross"]
 shape = SubResource( 5 )
