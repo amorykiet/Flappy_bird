@@ -12,8 +12,8 @@ func _on_Time_spawn_timeout() -> void:
 	
 func game_start() -> void:
 	score = 0
-	update_score(0)
-	$HUD/Play.hide()
+	$HUD/Control.update_score(0)
+	$HUD/Control.hide()
 	get_tree().call_group("Pipe_group", "died")
 	get_tree().paused = false
 	$Time_spawn.start()
@@ -21,18 +21,16 @@ func game_start() -> void:
 
 func game_over() -> void:
 	get_tree().call_group("Pipe_group", "is_disabled")
-	$HUD/Play.text = "Restart"
-	$HUD/Play.show()
 	get_tree().paused = true
-
-func update_score(new_score: int) -> void:
-	$HUD/Score.text = new_score as String
-
-func update_high_score(new_score: int) -> void:
-	$HUD/High_score.text = new_score as String
+	$HUD/Control.show()
+#
+#func update_score(new_score: int) -> void:
+#	pass
+#
+#func update_high_score(new_score: int) -> void:
+#	pass
 
 func hit_score(body):
 	score += 1
-	update_score(score)
-	if score > $HUD/High_score.text as int:
-		update_high_score(score)
+	$HUD/Control.update_score(score)
+	$HUD/Control.update_high_score(score)
