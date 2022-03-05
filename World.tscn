@@ -92,6 +92,14 @@ shape = SubResource( 5 )
 
 [node name="Control" parent="HUD" instance=ExtResource( 8 )]
 
+[node name="ColorRect" parent="HUD/Control" index="0"]
+color = Color( 0.772549, 0.796078, 0.486275, 1 )
+
+[node name="ReferenceRect" parent="HUD/Control" index="1"]
+border_color = Color( 0.392157, 0.203922, 0.00392157, 1 )
+border_width = 3.0
+editor_only = false
+
 [node name="Start_button" parent="HUD/Control/VBoxContainer" index="1"]
 shortcut = SubResource( 7 )
 
