@@ -89,3 +89,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 size_flags_stretch_ratio = 0.26
 text = "Start"
+
+[node name="Score" type="Label" parent="."]
+margin_left = 136.0
+margin_top = 48.0
+margin_right = 218.0
+margin_bottom = 62.0
+size_flags_vertical = 6
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "0"
+align = 1

@@ -6,7 +6,10 @@ export (float) var jump_speed = -400
 var velocity = Vector2.ZERO
 var flapping = false
 var screen = OS.window_size
+enum STATE {IDLE, FLY}
+var state: int = 3
 signal hit
+signal go
 
 func _ready() -> void:
 	hide()
@@ -16,16 +19,19 @@ func start(pos: Vector2) -> void:
 	position = pos
 	show()
 	$CollisionShape2D.disabled = false
-	rotation = -PI/6
-	velocity.y = jump_speed
-	$Delay_down.start()
-	if flapping:
-		flapping = false
+	state = STATE.IDLE
  
 func _physics_process(delta):
+	if state == STATE.FLY:
+		velocity.y += gravity * delta
+	if state == STATE.IDLE:
+		velocity.y = 0
+		rotation = 0
+		flapping = false
+		if Input.is_action_just_pressed("ui_select"):
+			state = STATE.FLY
+		
 	$AnimatedSprite.play()
-
-	velocity.y += gravity * delta
 	if flapping:
 		rotation += omega * delta
 		if rotation > PI/2:
@@ -42,6 +48,5 @@ func _physics_process(delta):
 	var collision_info = move_and_collide(velocity * delta, false)
 	if collision_info:
 		emit_signal("hit")
-
 func _start_down():
 	flapping = true
