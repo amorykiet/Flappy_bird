@@ -43,23 +43,25 @@ shape = SubResource( 1 )
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Background_layer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2( 288, 0 )
+motion_mirroring = Vector2( 432, 0 )
 script = ExtResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Background_layer"]
 position = Vector2( 142, 204 )
+scale = Vector2( 1.5, 1 )
 texture = ExtResource( 2 )
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
 layer = 0
 
 [node name="Base_layer" type="ParallaxLayer" parent="ParallaxBackground2"]
-motion_mirroring = Vector2( 336, 0 )
+motion_mirroring = Vector2( 504, 0 )
 script = ExtResource( 4 )
 speed_base = 150.0
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground2/Base_layer"]
 position = Vector2( 166, 480 )
+scale = Vector2( 1.5, 1 )
 texture = ExtResource( 3 )
 
 [node name="Path2D" type="Path2D" parent="."]
@@ -71,7 +73,6 @@ rotation = 1.5708
 
 [node name="Bird" parent="." instance=ExtResource( 1 )]
 position = Vector2( 140, 210 )
-collision_mask = 6
 
 [node name="Time_spawn" type="Timer" parent="."]
 wait_time = 1.3

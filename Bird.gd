@@ -48,5 +48,6 @@ func _physics_process(delta):
 	var collision_info = move_and_collide(velocity * delta, false)
 	if collision_info:
 		emit_signal("hit")
+
 func _start_down():
 	flapping = true
