@@ -5,6 +5,8 @@ export (float) var omega = PI * 4
 export (float) var jump_speed = -400
 var velocity = Vector2.ZERO
 var flapping = false
+var speed_idle = PI * 2
+var angle_idle = 0
 var screen = OS.window_size
 enum STATE {IDLE, FLY}
 var state: int = 3
@@ -25,7 +27,8 @@ func _physics_process(delta):
 	if state == STATE.FLY:
 		velocity.y += gravity * delta
 	if state == STATE.IDLE:
-		velocity.y = 0
+		angle_idle += speed_idle * delta
+		velocity.y = 50 * sin(angle_idle)
 		rotation = 0
 		flapping = false
 		if Input.is_action_just_pressed("ui_select"):
