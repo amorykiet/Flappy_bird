@@ -10,8 +10,10 @@ config_version=4
 
 [application]
 
+config/name="FlappyBirdfake"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
+config/windows_native_icon="res://flappy-bird-assets-master/FlappyBirdfake.ico"
 
 [display]
 
