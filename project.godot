@@ -12,6 +12,7 @@ config_version=4
 
 config/name="FlappyBirdfake"
 run/main_scene="res://World.tscn"
+boot_splash/image="res://561601-middle.png"
 config/icon="res://icon.png"
 config/windows_native_icon="res://flappy-bird-assets-master/FlappyBirdfake.ico"
 
