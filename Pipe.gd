@@ -13,4 +13,3 @@ func died() -> void:
 func is_disabled() -> void:
 	$CollisionShape2D.disabled = true
 	$CollisionShape2D2.disabled = true
-

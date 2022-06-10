@@ -12,6 +12,7 @@ config_version=4
 
 config/name="FlappyBirdfake"
 run/main_scene="res://World.tscn"
+boot_splash/image="res://561601-middle.png"
 config/icon="res://icon.png"
 config/windows_native_icon="res://flappy-bird-assets-master/FlappyBirdfake.ico"
 
@@ -24,6 +25,12 @@ window/stretch/aspect="keep"
 
 [input]
 
+ui_select={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":3,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
 ui_play={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777221,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
